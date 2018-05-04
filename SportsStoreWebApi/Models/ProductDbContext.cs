@@ -8,7 +8,7 @@ namespace SportsStoreWebApi.Models
 {
     public class ProductDbContext:DbContext
     {
-        public ProductDbContext() : base("SportsStoreDb")
+        public ProductDbContext() : base("SportsStoreMyFrontMVCDb")
         {
             Database.SetInitializer<ProductDbContext>(new ProductDbInitializer());
         }
