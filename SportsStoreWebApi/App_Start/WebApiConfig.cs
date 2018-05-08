@@ -24,6 +24,7 @@ namespace SportsStoreWebApi
             );
 
             config.Formatters.Remove(config.Formatters.XmlFormatter);
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
         }
     }
 }
