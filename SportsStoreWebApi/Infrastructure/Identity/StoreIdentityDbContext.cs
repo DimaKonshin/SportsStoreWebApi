@@ -7,8 +7,7 @@ namespace SportsStoreWebApi.Infrastructure.Identity
     {
         public StoreIdentityDbContext() : base("SportsStoreIdentityDb")
         {
-            Database.SetInitializer<StoreIdentityDbContext>(new
-            StoreIdentityDbInitializer());
+            Database.SetInitializer<StoreIdentityDbContext>(new StoreIdentityDbInitializer());
         }
         public static StoreIdentityDbContext Create()
         {
