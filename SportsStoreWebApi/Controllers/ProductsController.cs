@@ -25,7 +25,15 @@ namespace SportsStoreWebApi.Controllers
 
         public Product GetProduct(int id)
         {
-            return Repository.Products.Where(p => p.Id == id).FirstOrDefault();
+            Product result = Repository.Products.Where(p => p.Id == id).FirstOrDefault();
+            if (result == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+            }
+            else
+            {
+                return result;
+            }
         }
 
         public async Task PostProduct(Product product)
