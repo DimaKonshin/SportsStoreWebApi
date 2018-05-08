@@ -34,6 +34,7 @@ namespace SportsStoreWebApi.Controllers
             await Repository.SaveProductAsync(product);
         }
 
+        [Authorize(Roles = "Administrators")]
         public async Task DeleteProduct(int id)
         {
             await Repository.DeleteProductAsync(id);
